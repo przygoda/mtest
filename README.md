@@ -1,11 +1,61 @@
-# mtest
+# Dev-Container mit Node.js & MongoDB
 
-- sudo service mongodb start
-- mongosh
-  
+Demo:
+https://www.w3schools.com/mongodb/mongodb_mongosh_create_database.php
+
+
+## Beispielcode 
 ```
-use myDatabase
-db.createCollection("myCollection")
-db.myCollection.insertOne({ name: "Test", value: 123 })
+// DBs anzeigen
+show dbs
+
+// DB blog anlegen
+use blog
+
+// Collection in DB anlegen
+db.createCollection("posts")
+
+// JSON-Objekt in Collection schreiben 
+db.posts.insertOne({
+  title: "Post Title 1",
+  body: "Body of post.",
+  category: "News",
+  likes: 1,
+  tags: ["news", "events"],
+  date: Date()
+})
+
+// mehrere JSON-Objekte in Collection schreiben 
+db.posts.insertMany([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 3",
+    body: "Body of post.",
+    category: "Technology",
+    likes: 3,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 4",
+    body: "Body of post.",
+    category: "Event",
+    likes: 4,
+    tags: ["news", "events"],
+    date: Date()
+  }
+])
+
+// Collection anzeigen ...
+db.posts.find()
+
+db.posts.find( {category: "News"} )
 
 ```
