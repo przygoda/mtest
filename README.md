@@ -1,5 +1,8 @@
 # Dev-Container mit Node.js & MongoDB
 
+- Codespace Starten ... wird neu erstellt
+- dann MongoDB-Shell starten mit **mongosh**
+
 Demo:
 https://www.w3schools.com/mongodb/mongodb_mongosh_create_database.php
 
